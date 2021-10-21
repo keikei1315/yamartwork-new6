@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* noanimation-design.htmlのcss */
+.headerSlideNoanime{
+    width: 90%;
+    margin: 0 5% auto;
+    position: fixed;
+    z-index: 5;
+    top: 2.5%;
+}
+.backGroundImgCoverColorNoanime{
+    background-color: rgb(49, 49, 49);
+    box-shadow: 0 0 20px black;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+.topPictureFullColorNoAnimation{
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    top: 0;
+    transition: 3s;
+}
+.topPictureFullColorPicNoAnimation{
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    box-shadow: 0px 0px 10px white;
+    object-fit: cover;
+    margin: 0;
+}
+.topPictureNoanime{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+}
+.topPictureRightNoanime{
+    width: 100%;
+    height: 70vh;
+    border-radius: 5px;
+}
+.topPictureRightNoanime img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    top: 0%;
+}
+.topPictureLeftNoanime{
+    position: absolute;
+    height: 70vh;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 0 100%, 0 0);
+    top: 0;
+}
+.topPictureLeftNoanime img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  bottom: 0%;
+}
+.backGroundTitlePositionNoanime{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(49, 49, 49);
+}
+#backGroundTitleNoanime{
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    margin: 0;
+    padding: 0;
+    opacity: 1;
+    font-weight: bold;
+}
+.scrollAreaNoanime{
+    display: none;
+}
+#backGroundTitle2Noanime{
+    display: none;
+}
+#backGroundImg{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#backGroundImgFirst{
+    display: block;
+}
+#backGroundImgSecond{
+    display: none;
+}
+#backGroundImgThird{
+    display: none;
+}
+#backGroundImg img{
+    width: 100%;
+    height: 100%;
+}
+.backGroundImgCoverColor{
+    background-color: rgb(49, 49, 49);
+    box-shadow: 0 0 20px black;
+    position: relative;
+    overflow: hidden;
+}
+.backGroundImgCoverColor:not(:nth-of-type(1)){
+    margin-top: 60vh;
+}
+
+.createAreaNoanime p{
+    color: white;
+}
+.designNoanime{
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+    padding: 0;
+}
+.designNoanime p{
+    padding: 0;
+    margin-bottom: 0;
+}
+.createFlexNoanime{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3%;
+}
+.createFlexPicNoanime{
+    opacity: 1;
+    /* animation: createFlexPicMove 12s;
+    animation-iteration-count: infinite; */
+}
+.createFlexPicNoanime.large{
+    width: 25vw;
+    height:25vw;
+}
+.createFlexNoanime div{
+    width: 24vw;
+    height: 24vw;
+    margin: 3.4%  2.5%;
+}
+.createFlexNoanime div img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 8px white;
+    object-fit: contain;
+}
+
+/* noanimation-design.htmlのcss */
+

@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* design.htmlのcss */
+#topButton{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 0 8px white;
+    position: fixed;
+    bottom: 40px;
+    right: 6.75%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    cursor: pointer;
+}
+#designMenuBar{
+  width: 90%;
+  padding: 0 5%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(255, 241, 211);
+  z-index: 1;
+}
+#designMenuBar > a{
+  color: inherit;
+  display: inline-block;
+  width: 12.5%;
+  list-style: none;
+  text-align: center;
+  border-left: 1px solid black;
+  height: auto;
+  font-size: 8pt;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#designMenuBar a:nth-of-type(8){
+  border-right: 1px solid black;
+}
+
+.largePicture{
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    height: 45vw;
+    opacity: 0;
+    transition: .3s;
+    border: solid white 5px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px white;
+    background-color: black;
+}
+.largePicture.open{
+    opacity: 1;
+    z-index: 3;
+}
+.createFlexPicMoreLarge{
+    position: absolute;
+    width: 100vw;
+    height: 45vw;
+    opacity: 0;
+    display: none;
+    transition: .3s;
+}
+.createFlexPicMoreLarge.open{
+    display: block;
+    opacity: 1;
+}
+.createFlexPicMoreLarge img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.createAreaMore{
+    position: relative;
+    margin-bottom: 100px;
+}
+.createAreaMore p{
+    color: white;
+}
+.designMore{
+    color: white;
+    font-size: 6em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+    /* text-shadow: 4px 4px 8px white; */
+}
+.designMore p{
+    padding: 0;
+    margin-bottom: 0;
+}
+.topBack{
+    text-decoration: none;
+}
+.topMenu{
+    position: relative;
+    height: 50px;
+}
+.top{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.3em;
+}
+
+.topMenuStickWhite1{
+    height: 3px;
+    width: 120px;
+    position: absolute;
+    bottom: 3px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: white;
+}
+.topMenuStickWhite2{
+    height: 30px;
+    width: 3px;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    left: 50%;
+    transform: translateX(-50px) rotate(45deg);
+}
+/* スクロール */
+.scrollArea{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 65px;
+    margin-top: 50px;
+  }
+  .scrollDownFont{
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    writing-mode: tb-rl;
+    writing-mode:vertical-rl;
+    color: white;
+    transform: translateX(-50%);
+  }
+  .scrollDown{
+    width:2px;
+    height: 65px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom:0px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .scrollCircle{
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-name: scrollDownAnime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  /* 作品集 */
+.createFlexMore{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 0 .1%;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+}
+.createFlexPicMore{
+  position: relative;
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
+    width: 19.8%;
+    padding-top: 19.8%;
+    margin: .1% .1%;
+    background-color: rgb(20, 20, 20);
+    /* border: 1px white solid; */
+}
+.createFlexPicMore.move{
+    opacity: 1;
+    /* animation: createFlexPicMove 30s;
+    animation-iteration-count: infinite; */
+}
+.createFlexPicMore.large{
+    width: 25vw;
+    height:25vw;
+}
+
+.createFlexMore div img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    object-fit: contain;
+}
+
+.designMenubutton{
+    display: block;
+    height:50px;
+    width:50px;
+    position:fixed;
+    top:0;
+    right:0;
+    z-index: 4;
+    display: none;
+    opacity: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .3);
+  }
+  .designMenubutton.open{
+    display: block;
+    opacity: 1;
+  }
+  
+  .designMenubutton div{
+    height:4px;
+    width:30px;
+    background: white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+  }
+  
+  .designMenubutton div:nth-of-type(1){
+    transform: translate(-50%, -10px);
+  }
+  
+  .designMenubutton div:nth-of-type(3){
+    transform: translate(-50%, 10px);
+  }
+  
+  .designMenubutton.active div:nth-of-type(1){
+    transform:  translate(-50%, 0px) rotate(45deg);
+  }
+  .designMenubutton.active div:nth-of-type(2){
+    opacity: 0;
+  }
+  .designMenubutton.active div:nth-of-type(3){
+    transform:  translate(-50%, 0px) rotate(-45deg);
+  }
+/* design.htmlのcss */
+
+/* デザインモバイル */
+@media screen and (max-width:800px) {
+
+  .designMore{
+    font-size: 3em;
+  }
+  .createFlexMore{
+    width: 100%;
+}
+.createFlexPicMore{
+  position: relative;
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
+    width: 33%;
+    padding-top: 33%;
+    margin: .166666% .166666%;
+    background-color: rgb(49, 49, 49);
+    /* border: 1px white solid; */
+}
+.largePicture{
+  width: 100vw;
+  height: 45vh;
+}
+.createFlexPicMoreLarge{
+  width: 100vw;
+  height: 45vh;
+}
+#designMenuBarArea{
+  width: 100%;
+  overflow-x: scroll;
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  z-index: 10;
+}
+#designMenuBar{
+  width: 1200px;
+  padding: 5% 2.5%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  position: relative;
+  bottom: 0;
+  background-color: rgb(255, 241, 211);
+}
+#designMenuBar > a{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  height: 2em;
+  width: 150px;
+  list-style: none;
+  text-align: center;
+  border: 1px solid black;
+  height: auto;
+  font-size: 8pt;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .44), 1px 1px 1px rgb(117, 110, 96);
+  box-shadow: black 1px 2px 2px;
+}
+#designMenuBar > a >li{
+  height: 3em;
+  display: inline-flex;
+  align-items: center;
+}
+#topButton{
+  right: 2.5%;
+  bottom:10%;
+}
+.helpScroll{
+  height: 250px;
+  background-color: rgb(49, 49, 49);
+}
+}
+/* デザインモバイル終わり */
